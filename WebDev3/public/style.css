@@ -1,0 +1,10 @@
+div {
+        width: 5cm;
+        height: 5cm;
+}
+
+div.vermelho {background-color: red;}
+div.amarelo {background-color: yellow;}
+div.verde {background-color: green;}
+div.laranja {background-color: orange;}
+div.azul {background-color: blue;}
