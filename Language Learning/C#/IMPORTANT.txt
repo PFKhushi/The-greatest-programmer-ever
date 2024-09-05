@@ -1,0 +1,21 @@
+C#  -   A statically strongly and safe typed compiled programming language. 
+        Known for being the language used by the .net framwork. 
+
+
+Creating an app (not the way I wanted, but i had to give up for now):
+        
+        First we need to install a tool to build our programs. We are going to use the .NET SDK 
+        to build and run whatever we build for now.
+                
+                Command to install: sudo apt install -y  dotnet-skd-8.0 (or the newest version available)
+
+        Second we use the .NET to build a skeleton for our program (because i dont know how to 
+        compile a c# file from scratch):
+                
+                Command to create skeleton: dotnet new console -n "filename"
+                
+        Now we can use the run command on the program directory to run the file:
+                
+                Command to run: dotnet run
+                You can run this commmand with the opt --no-build after the first run, 
+                to make it quicker
