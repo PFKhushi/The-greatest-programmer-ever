@@ -1,0 +1,13 @@
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/bin/Debug/net8.0/Conditionals
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/bin/Debug/net8.0/Conditionals.deps.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/bin/Debug/net8.0/Conditionals.runtimeconfig.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/bin/Debug/net8.0/Conditionals.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/bin/Debug/net8.0/Conditionals.pdb
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.csproj.CoreCompileInputs.cache
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.sourcelink.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/refint/Conditionals.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.pdb
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/Conditionals.genruntimeconfig.cache
+/home/pedro/the greatest programmer ever/Language Learning/C#/002 - Conditional statements/Conditionals/obj/Debug/net8.0/ref/Conditionals.dll

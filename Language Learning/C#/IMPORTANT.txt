@@ -1,6 +1,15 @@
 C#  -   A statically strongly and safe typed compiled programming language. 
         Known for being the language used by the .net framwork. 
 
+Compile and run simple app:
+
+        csc script.cs
+        mono script.exe
+   Source: https://www.mono-project.com/docs/getting-started/mono-basics/
+
+
+                First you complie with script.cs, then you execute the executable created wih mono script.exe
+
 
 Creating an app (not the way I wanted, but i had to give up for now):
         
@@ -9,10 +18,10 @@ Creating an app (not the way I wanted, but i had to give up for now):
                 
                 Command to install: sudo apt install -y  dotnet-skd-8.0 (or the newest version available)
 
-        Second we use the .NET to build a skeleton for our program (because i dont know how to 
-        compile a c# file from scratch):
+        Second we use the .NET to build a skeleton for our program with a Main functions(because i dont know how to make the lsp work with a .cs file from scratch):
                 
-                Command to create skeleton: dotnet new console -n "filename"
+                Command to create skeleton: 
+                        dotnet new console -n "filename" --use-program-main
                 
         Now we can use the run command on the program directory to run the file:
                 
