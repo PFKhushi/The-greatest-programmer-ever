@@ -1,0 +1,15 @@
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/bin/Debug/net8.0/Luck based game
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/bin/Debug/net8.0/Luck based game.deps.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/bin/Debug/net8.0/Luck based game.runtimeconfig.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/bin/Debug/net8.0/Luck based game.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/bin/Debug/net8.0/Luck based game.pdb
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.AssemblyInfoInputs.cache
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.AssemblyInfo.cs
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.csproj.CoreCompileInputs.cache
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.sourcelink.json
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/refint/Luck based game.dll
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.pdb
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/Luck based game.genruntimeconfig.cache
+/home/pedro/the greatest programmer ever/Language Learning/C#/003 - Loops and arrays/Luck based game/obj/Debug/net8.0/ref/Luck based game.dll
