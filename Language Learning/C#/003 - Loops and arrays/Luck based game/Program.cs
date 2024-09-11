@@ -10,8 +10,9 @@
                 //test.nome();
                 //int [] tere = new int[5];
                 //Console.WriteLine(":::\n"+tere.Length);
-                menu();
-                //Enemy test = new Enemy();  
+                //menu();
+                Enemy test = new Enemy();  
+                print_mesa_attack(test);
                 //List<int> tet = new List<int>();
                 //Console.WriteLine("\n\n"+tet.Count);
                 //tet.Add(1);
@@ -40,14 +41,46 @@
                 Enemy boss = new Enemy();
                 
         }
-        public static void print_mesa_attack(Enemy boss)                                                 {
+        public static void print_mesa_attack(Enemy boss){
+                
                 Random rand = new Random();
-                int[] mesa = new int[5]; 
-                int test = rand.Next(boss.Count);
-                int j = boss.Count;
-                for(int i=0; i < j;i++){
-                        mesa[i] = rand.Next(boss.Count());
-                }//:lua vim.diagnostic.open_float()
+                List<int> mesa = new List<int>();
+                for(int i = 0; i<5; i++){
+                        mesa.Add(-1);
+                }
+                int vida_boss = boss.get_vida().Count;
+
+
+                int test1,test2;
+                test1 = rand.Next(mesa.Count);
+                test2 = rand.Next(vida_boss);
+                Console.WriteLine("Test1: " + test1 + "test2: " + test2);
+                mesa[test1] = boss.get_vida()[test2];
+                int temp;
+                for(int i = 0; i<mesa.Count; i++){
+                        Console.WriteLine("\n-----------------------------\n");
+                        print_list(mesa);
+                        Console.WriteLine("\n");
+
+                        if(mesa[i]==-1){
+                                temp = rand.Next(100);
+                                if(!mesa.Contains(temp) && !boss.get_vida().Contains(temp)){
+                                        mesa[i]=temp;
+                                }else{
+                                        i-=1;
+                                }
+                                Console.WriteLine(temp + "\n");
+                                print_list(boss.get_vida());
+                                Console.WriteLine("------------------------- \n");
+                        }
+                }
+                print_list(mesa);
+                Console.WriteLine("\n");
+                print_list(boss.get_vida());
+
+                
+                
+                //:lua vim.diagnostic.open_float()
         }
         public static List<int> faz_enemy(){
                 Random num_gen = new Random();
@@ -77,7 +110,7 @@
                 }        
         }
     
-        class Player{
+        public class Player{
                 private String name = "Player";
                 private int vida = 5;
 
@@ -98,7 +131,7 @@
                 }
 
         } 
-        class Enemy{
+        public class Enemy{
                 private String name = "Mc King's hut";
                 private List<int> vida = faz_enemy();
                 public void nome(){
