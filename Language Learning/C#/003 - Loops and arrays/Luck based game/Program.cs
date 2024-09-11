@@ -12,7 +12,7 @@
                 //Console.WriteLine(":::\n"+tere.Length);
                 //menu();
                 Enemy test = new Enemy();  
-                print_mesa_attack(test);
+                make_mesa_attack(test);
                 //List<int> tet = new List<int>();
                 //Console.WriteLine("\n\n"+tet.Count);
                 //tet.Add(1);
@@ -24,7 +24,7 @@
 
         }
         public static void menu(){
-                Console.WriteLine("Menu: \n1 - Jogar\n 2 - Sair");
+                Console.WriteLine("Menu: \n1 - Jogar\n2 - Sair");
                 int op =(int)Console.ReadKey().KeyChar-'0';
                 switch (op)
                 {
@@ -39,9 +39,12 @@
         }
         public static void jogo(){
                 Enemy boss = new Enemy();
+                Console.Write("Digite seu nome: ");
+                String? nome = Console.ReadLine();
+                Player? player = new Player(nome);
                 
         }
-        public static void print_mesa_attack(Enemy boss){
+        public static List<int> make_mesa_attack(Enemy boss){
                 
                 Random rand = new Random();
                 List<int> mesa = new List<int>();
@@ -50,18 +53,9 @@
                 }
                 int vida_boss = boss.get_vida().Count;
 
-
-                int test1,test2;
-                test1 = rand.Next(mesa.Count);
-                test2 = rand.Next(vida_boss);
-                Console.WriteLine("Test1: " + test1 + "test2: " + test2);
-                mesa[test1] = boss.get_vida()[test2];
+                mesa[rand.Next(mesa.Count)] = boss.get_vida()[rand.Next(vida_boss)];
                 int temp;
                 for(int i = 0; i<mesa.Count; i++){
-                        Console.WriteLine("\n-----------------------------\n");
-                        print_list(mesa);
-                        Console.WriteLine("\n");
-
                         if(mesa[i]==-1){
                                 temp = rand.Next(100);
                                 if(!mesa.Contains(temp) && !boss.get_vida().Contains(temp)){
@@ -69,14 +63,12 @@
                                 }else{
                                         i-=1;
                                 }
-                                Console.WriteLine(temp + "\n");
-                                print_list(boss.get_vida());
-                                Console.WriteLine("------------------------- \n");
                         }
                 }
                 print_list(mesa);
                 Console.WriteLine("\n");
                 print_list(boss.get_vida());
+                return mesa;
 
                 
                 
@@ -114,8 +106,10 @@
                 private String name = "Player";
                 private int vida = 5;
 
-                public Player(String new_name){
-                        name = new_name;
+                public Player(String? new_name){
+                        if(new_name!=null){
+                                name = new_name;
+                        }
                 }
                 public void nome(){
                         Console.WriteLine(name);
