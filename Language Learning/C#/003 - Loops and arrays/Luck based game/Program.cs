@@ -10,9 +10,8 @@
                 //test.nome();
                 //int [] tere = new int[5];
                 //Console.WriteLine(":::\n"+tere.Length);
-                //menu();
-                Enemy test = new Enemy();  
-                make_mesa_attack(test);
+                menu();
+                
                 //List<int> tet = new List<int>();
                 //Console.WriteLine("\n\n"+tet.Count);
                 //tet.Add(1);
@@ -41,8 +40,101 @@
                 Enemy boss = new Enemy();
                 Console.Write("Digite seu nome: ");
                 String? nome = Console.ReadLine();
-                Player? player = new Player(nome);
+                Player player = new Player(nome);
                 
+                for(int i = 0; (boss.get_vida().Count>=0 && player.get_vida()>=0); i++ ){
+                        
+                        current_round(player, boss, i);
+                        Console.WriteLine("Boss: "+boss.get_vida().Count);
+                        Console.WriteLine("Player: "+player.get_vida());
+
+                        
+                }
+                if(boss.get_vida().Count>player.get_vida()){
+                        Console.WriteLine(player.get_nome() + " perdeu!");        
+                }else{
+                        Console.WriteLine(player.get_nome() + " ganhou!");        
+                        
+                }
+
+                
+        }
+        public static void current_round(Player player, Enemy boss, int round_number){
+                List<int> mesa = make_mesa_attack(boss);
+                Console.WriteLine("Round: " + round_number + " iniciado!\n");
+                Console.WriteLine("O q vc quer fazer?\n");
+                int resp;
+                while(true){
+                
+                        Console.WriteLine("\n1 - Atacar\n2 - Esquivar\n3 - Desistir"); 
+                        resp = (int)(Console.ReadKey().KeyChar)-'0';
+                        Console.WriteLine("dsfadsf"+resp);
+                        if(resp>0 && resp<4){
+                                break;
+                        }
+                        Console.WriteLine("Nao entendi..");
+                }
+                switch (resp){
+                case 1:
+                        Atacar(boss, player, mesa);
+                        break;
+                case 2:
+                        Esquivar(boss, player);
+                        break;
+                case 3:
+                        Desistir(player);
+                        break;
+                }
+
+                
+                
+
+        }
+        public static void Atacar(Enemy boss, Player player, List<int> mesa){
+                
+                String? temp;
+                int resp = -1;
+                while(true){
+                        try{    
+                                print_list(mesa);
+                                Console.WriteLine("Qual dos numeros da mesa pertence ao boss? ou Digite sair para voltar ao menu\n");
+                                temp = Console.ReadLine();
+                                if(temp == "sair"){
+                                        menu();
+                                }
+                                resp = temp is null ? -1 : Int32.Parse(temp);
+                                if(resp == -1){
+                                        Console.WriteLine("Digite algum numero");
+                                        continue;
+                                }
+                                if(!mesa.Contains(resp)){
+                                        Console.WriteLine("Numero n faz parte da mesa");
+                                        continue;
+                                }
+                                break;
+                        }
+                        catch(FormatException){
+                                Console.Write("Digite apenas numeros");
+
+                        }
+                }
+                if(boss.get_vida().Contains(resp)){
+                        boss.remove_life(resp);
+                }else{
+                        player.dano();
+                }
+                
+        }
+        public static void Esquivar(Enemy boss, Player player){
+                Random rand = new Random();
+                if(rand.Next(100)<50){
+                        player.esqv_fail();
+                }else{
+                        player.esqv_succss();
+                }
+        }
+        public static void Desistir(Player player){
+                player.player_scd();
         }
         public static List<int> make_mesa_attack(Enemy boss){
                 
@@ -65,13 +157,7 @@
                                 }
                         }
                 }
-                print_list(mesa);
-                Console.WriteLine("\n");
-                print_list(boss.get_vida());
                 return mesa;
-
-                
-                
                 //:lua vim.diagnostic.open_float()
         }
         public static List<int> faz_enemy(){
@@ -97,13 +183,16 @@
                 return lista;
         }
         static void print_list(List<int> lista){
+                Console.Write("| ");
                 for(int i=0;i<lista.Count;i++){
-                        Console.WriteLine(lista[i]);
-                }        
+                        Console.Write(lista[i]);
+                        Console.Write(" | ");
+                }       
+                Console.WriteLine(" ");
         }
-    
         public class Player{
                 private String name = "Player";
+                private String[] players_mdls = {" (ง ͠°_°)ง "," ( ･益･)ﾉ⌒●* "," [¬ºд °] ¬ "," (´×︹×`) ",""};
                 private int vida = 5;
 
                 public Player(String? new_name){
@@ -111,8 +200,14 @@
                                 name = new_name;
                         }
                 }
-                public void nome(){
-                        Console.WriteLine(name);
+                public String get_nome(){
+                        return name;
+                }
+                public int get_vida(){
+                        return vida;
+                }
+                public void player_scd(){
+                        vida=-1;
                 }
                 public void dano(){
                         vida--;
@@ -127,6 +222,7 @@
         } 
         public class Enemy{
                 private String name = "Mc King's hut";
+                private String[] enemy_mdls = {"(＾⌣＾)","╭∩╮(´• ᴗ •`˵)╭∩╮", "﴾⨱﹏⨱﴿","ヽ(ｏ`д′ｏ) ﾉ"};
                 private List<int> vida = faz_enemy();
                 public void nome(){
                         Console.WriteLine(name);
@@ -140,7 +236,11 @@
                 public List<int> get_vida(){
                         return vida;
                 }
+                public void remove_life(int ponto){
+                        vida.Remove(ponto);
+                }
         }
     }
     
 }
+

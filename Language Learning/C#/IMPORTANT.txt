@@ -28,3 +28,10 @@ Creating an app (not the way I wanted, but i had to give up for now):
                 Command to run: dotnet run
                 You can run this commmand with the opt --no-build after the first run, 
                 to make it quicker
+
+Adding a Class lib:
+        
+        for now i only know how to create one library folder contains one class file.
+
+                we are gonna run the command:
+                        dotnet new classlib -n ClassName

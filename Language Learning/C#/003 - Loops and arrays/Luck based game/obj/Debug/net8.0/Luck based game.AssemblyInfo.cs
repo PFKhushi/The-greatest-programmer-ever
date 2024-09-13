@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Luck based game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13151931e7e0cf42c185eaa60bdf4f239a893bb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89003af01fb3788f93cce3ce33e432ce27930982")]
 [assembly: System.Reflection.AssemblyProductAttribute("Luck based game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Luck based game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
