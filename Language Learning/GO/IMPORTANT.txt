@@ -1,0 +1,10 @@
+Used :Lspinstall go to instal dependencies for autocomplete go
+
+The instructions on the GOlang website work, but they were reseting after closing the terminal, so I echoed the second comand to the .bashrc. Now it works on boot
+
+running is easy just "go run fname.go" or "go run ." but only when you have one *.go file
+
+GO seems to 
+        -not let you get input without error handling
+        -use := when declaring a new variable with a value defining the type
+        -use = when assigning to an existing variable with a type already defined

