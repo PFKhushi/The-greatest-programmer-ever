@@ -2,6 +2,13 @@ Used :Lspinstall go to instal dependencies for autocomplete go
 
 The instructions on the GOlang website work, but they were reseting after closing the terminal, so I echoed the second comand to the .bashrc. Now it works on boot
 
+To create a project we're gonna use:
+        go mod tidy
+                to create a go.mod file so we can run our script 
+
+        go mod init example.com/m/v2
+                I still dont know why i would use this module
+
 running is easy just "go run fname.go" or "go run ." but only when you have one *.go file
 
 GO seems to 
