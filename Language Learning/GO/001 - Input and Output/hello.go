@@ -91,9 +91,11 @@ func main() {
         print_const()
         fmt.Println("Digite seu nome:")
          
-        _, err := fmt.Scanln(&test)     // Scanln returns 2 values: _ gets something (?); err gets the error values
-                                        // cannot print _;  
-        ReadLine(test)
+        _, err := fmt.Scanln(&test)     // Scan returns 2 values: 
+                                        // "_" tells the program to ignore
+                                        // "err" gets the error values
+                                        // cannot print _ 
+        ReadLine(test)                          
         if err != nil {
                 print(err)
         }
