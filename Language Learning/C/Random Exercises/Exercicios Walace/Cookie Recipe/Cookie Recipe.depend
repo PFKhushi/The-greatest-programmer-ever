@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1666241740 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicios walace\cookie recipe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

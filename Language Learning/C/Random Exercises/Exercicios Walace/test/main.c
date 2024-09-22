@@ -1,0 +1,504 @@
+#include <stdio.h>
+#include <windows.h>//errado Beep(300,500); certo Beep(700,500);
+#include <stdlib.h>
+
+struct player{
+    char nome[50];
+    int cor, pontos;
+};
+
+struct player jogador[2];
+struct player *ptr[2];
+
+
+int main()
+{
+    saw();
+
+    Beep(198, 500);//la
+    Beep(219, 500);//la#
+
+    Beep(243, 500);//si -
+    Beep(261, 500);//do
+    Beep(277, 500);//do#
+    Beep(293, 500);//re
+    Beep(311, 500);//re#
+    Beep(329, 500);//mi
+    Beep(349, 500);//fa
+    Beep(370, 500);//fa#
+    Beep(392, 500);//sol
+    Beep(415, 500);//sol#
+    Beep(440, 500);//la
+    Beep(466, 500);//la#
+    Beep(493, 500);//si
+    Beep(523, 500);//do +
+    Beep(550, 500);//do# +
+    Beep(587, 500);//re +
+
+    Beep(659, 500);//mi
+    Beep(698, 500);//fa
+    Beep(784, 500);//sol
+    Beep(812, 500);//la
+    Beep(865, 500);//si
+
+
+
+    char letra = 'b';
+    character_creation();
+
+    return 0;
+}
+void saw(){
+    Beep(293, 200);//re
+    Beep(329, 200);//mi
+    Beep(349, 500);//fa
+    sleep(1);
+    Beep(293, 200);//re
+    Beep(329, 200);//mi
+    Beep(349, 500);//fa
+    Beep(329, 200);//mi
+    Beep(293, 200);//re
+    Beep(329, 200);//mi
+    Beep(349, 200);//fa
+    Beep(392, 500);//sol
+
+}
+void jojo(){
+    sleep(5);
+    Beep(370, 600);//fa#
+    Beep(293, 900);//re
+    Beep(293, 150);//re
+    Beep(329, 150);//mi
+
+    Beep(349, 450);//fa
+    Beep(329, 450);//mi
+    Beep(293, 300);//re
+    Beep(277, 450);//do#
+    Beep(293, 450);//re
+    Beep(329, 300);//mi
+
+    Beep(370, 600);//fa#
+    Beep(493, 900);//si
+    Beep(243, 300);//si -
+    Beep(277, 300);//do#
+
+    Beep(293, 450);//re
+    Beep(329, 450);//mi
+    Beep(293, 300);//re
+    Beep(277, 450);//do#
+    Beep(440, 150);//la
+    Beep(392, 300);//sol
+    Beep(370, 300);//fa#
+
+    Beep(370, 600);//fa#
+    Beep(293, 900);//re
+    Beep(293, 150);//re
+    Beep(329, 150);//mi
+
+    Beep(349, 450);//fa
+    Beep(329, 450);//mi
+    Beep(293, 300);//re
+    Beep(277, 450);//do#
+    Beep(293, 450);//re
+    Beep(329, 300);//mi
+
+    Beep(370, 600);//fa#
+    Beep(493, 900);//si
+
+    Beep(550, 500);//do# +
+    Beep(587, 500);//re +
+    Beep(392, 500);//sol
+    Beep(370, 500);//fa#
+    Beep(349, 500);//fa
+    Beep(587, 500);//re +
+    Beep(466, 500);//la#
+    Beep(370, 500);//fa#
+
+
+
+
+
+
+
+}
+void character_creation(){
+
+    ptr[0] = &jogador[2];
+    for(int i=0;i<2;i++){
+        printf("Insira o nome do Jogador-%d: ", i + 1);
+        scanf(" %s", jogador[i].nome);
+        Beep(300,500);
+        Beep(700,500);
+    }
+    system("cls");
+
+
+    while(1){
+        printf("%s!\nDigite o numero da cor que você quer jogar?\nBrancas - 1\nPretas  - 2\n", jogador[0].nome);
+        scanf("%d", &jogador[0].cor);
+        if(jogador[0].cor==1){
+            jogador[1].cor=2;
+            break;
+        }else if(jogador[0].cor==2){
+            jogador[1].cor=1;
+            break;
+        }
+    }
+
+    scanf(" %s", (*ptr[0]).nome);
+
+   system("cls");
+}
+char letra;
+
+void mario(){
+
+    Beep(480,200);
+
+    Beep(1568,200);
+
+    Beep(1568,200);
+
+    Beep(1568,200);
+
+
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+
+    Beep(369.99,200);
+
+    Beep(392,200);
+
+    Beep(369.99,200);
+
+    Beep(392,200);
+
+    Beep(392,400);
+
+    Beep(196,400);
+
+
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(83.99,200);
+
+    Beep(880,200);
+
+    Beep(830.61,200);
+
+    Beep(880,200);
+
+    Beep(987.77,400);
+
+
+    Beep(880,200);
+
+    Beep(783.99,200);
+
+    Beep(698.46,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(880,200);
+
+    Beep(830.61,200);
+
+    Beep(880,200);
+
+    Beep(987.77,400);
+
+      Sleep(200);
+
+    Beep(1108,10);
+    Beep(1174.7,200);
+    Beep(1480,10);
+    Beep(1568,200);
+
+
+    Sleep(200);
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(783.99,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(880,200);
+
+    Beep(830.61,200);
+
+    Beep(880,200);
+
+    Beep(987.77,400);
+
+
+    Beep(880,200);
+
+    Beep(783.99,200);
+
+    Beep(698.46,200);
+
+
+    Beep(659.25,200);
+
+    Beep(698.46,200);
+
+    Beep(784,200);
+
+    Beep(880,400);
+
+    Beep(784,200);
+
+    Beep(698.46,200);
+
+    Beep(659.25,200);
+
+
+
+    Beep(587.33,200);
+
+    Beep(659.25,200);
+
+    Beep(698.46,200);
+
+    Beep(784,400);
+
+    Beep(698.46,200);
+
+    Beep(659.25,200);
+
+    Beep(587.33,200);
+
+
+
+    Beep(523.25,200);
+
+    Beep(587.33,200);
+
+    Beep(659.25,200);
+
+    Beep(698.46,400);
+
+    Beep(659.25,200);
+
+    Beep(587.33,200);
+
+    Beep(493.88,200);
+
+    Beep(523.25,200);
+
+
+    Sleep(400);
+    Beep(349.23,400);
+
+    Beep(392,200);
+
+    Beep(329.63,200);
+
+    Beep(523.25,200);
+
+    Beep(493.88,200);
+
+    Beep(466.16,200);
+
+
+
+    Beep(440,200);
+
+    Beep(493.88,200);
+
+    Beep(523.25,200);
+
+    Beep(880,200);
+
+    Beep(493.88,200);
+
+    Beep(880,200);
+
+    Beep(1760,200);
+
+    Beep(440,200);
+
+
+
+    Beep(392,200);
+
+    Beep(440,200);
+
+    Beep(493.88,200);
+
+    Beep(783.99,200);
+
+    Beep(440, 200);
+
+    Beep(783.99,200);
+
+    Beep(1568,200);
+
+    Beep(392,200);
+
+
+
+    Beep(349.23,200);
+
+    Beep(392,200);
+
+    Beep(440,200);
+
+    Beep(698.46,200);
+
+    Beep(415.2,200);
+
+    Beep(698.46,200);
+
+    Beep(1396.92,200);
+
+    Beep(349.23,200);
+
+
+
+    Beep(329.63,200);
+
+    Beep(311.13,200);
+
+    Beep(329.63,200);
+
+    Beep(659.25,200);
+
+    Beep(698.46,400);
+
+    Beep(783.99,400);
+
+
+
+    Beep(440,200);
+
+    Beep(493.88,200);
+
+    Beep(523.25,200);
+
+    Beep(880,200);
+
+    Beep(493.88,200);
+
+    Beep(880,200);
+
+    Beep(1760,200);
+
+    Beep(440,200);
+
+
+
+    Beep(392,200);
+
+    Beep(440,200);
+
+    Beep(493.88,200);
+
+    Beep(783.99,200);
+
+    Beep(440,200);
+
+    Beep(783.99,200);
+
+    Beep(1568,200);
+
+    Beep(392,200);
+
+
+
+    Beep(349.23,200);
+
+    Beep(392,200);
+
+    Beep(440,00);
+
+    Beep(698.46,200);
+
+    Beep(659.25,200);
+
+    Beep(698.46,200);
+
+    Beep(739.99,200);
+
+    Beep(783.99,200);
+
+    Beep(392,200);
+
+    Beep(392,200);
+
+    Beep(392,200);
+
+    Beep(392,200);
+
+    Beep(196,200);
+
+    Beep(196,200);
+
+    Beep(196,200);
+
+
+
+    Beep(185,200);
+
+    Beep(196,200);
+
+    Beep(185,200);
+
+    Beep(196,200);
+
+    Beep(207.65,200);
+
+    Beep(220,200);
+
+    Beep(233.08,200);
+
+    Beep(246.94,200);
+
+}
+
+
+

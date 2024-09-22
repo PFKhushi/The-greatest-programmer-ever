@@ -1,0 +1,7 @@
+To create a file we us a a text editor ex:
+
+        nvim fname.js
+
+then we run it with node like:
+        
+        node fname.js

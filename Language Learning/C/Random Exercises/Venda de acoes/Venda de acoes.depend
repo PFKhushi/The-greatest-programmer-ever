@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1709158712 source:c:\users\mafia\desktop\estrutura_de_dados_usando_c\venda de acoes\main.c
+	<stdio.h>
+	<stdlib.h>
+

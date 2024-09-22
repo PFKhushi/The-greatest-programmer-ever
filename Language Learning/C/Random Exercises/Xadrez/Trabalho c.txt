@@ -1,0 +1,39 @@
+
+     01   02   03   04   05   06   07   08
+   .----.----.----.----.----.----.----.----.
+ A | BT | BH | BB | BQ | BK | BB | BH | BT |
+   .----.----.----.----.----.----.----.----.
+ B | BP | BP | BP | BP | BP | BP | BP | BP |
+   .----.----.----.----.----.----.----.----.
+ C |    |    |    |    |    |    |    |    |
+   .----.----.----.----.----.----.----.----.
+ D |    |    |    |    |    |    |    |    |
+   .----.----.----.----.----.----.----.----.
+ E |    |    |    |    |    |    |    |    |
+   .----.----.----.----.----.----.----.----.
+ F |    |    |    |    |    |    |    |    |
+   .----.----.----.----.----.----.----.----.
+ G | WP | WP | WP | WP | WP | WP | WP | WP |
+   .----.----.----.----.----.----.----.----.
+ H | WT | WH | WB | WK | WQ | WB | WH | WT |
+   .----.----.----.----.----.----.----.----.
+
+O tabuleiro é constituido de duas matrizes, uma representando a posição das peça e onde a logica de movimentaçao se encontra e outra representando a posicáo da matriz das peças no tabuleiro. As regras de movimentação são iguais 
+para todas as peças com excessão dos peões, pois so podem andar para frente e essa direção depende exclusivamente da cor das peças. Foi feita uma função para cada peça de movimentaçao distinta e para uma movimentaç!ao ser valida
+é necessário q a peca para se mover seja aliada e n vazia e a peça destino tem que ser ou vazia, ou inimiga sem contar com o rei. As regras de movimentação serão limitas se o rei aliado estiver em xeque ou se mover a peça escolhida for deixar o rei em xeque ou o movimento feito n ser suficiente para retirar xeque. O xeque e o xeque mate serão verificados todas as jogadas e o jogo só avança quando uma posicao válida for incerida. Para verificar o xeque, foi feita uma função para verificar a posicao do rei aliado e se alguma peça inimiga consegue chegar nele, se for o caso, será verificado se alguma peça aliada consegue neutrazilar a peça causando o xeque, se não conseguir, varificará a tragetória da peça e tentar colocar algum aliado no caminho, se ainda assim o xeque continuar, será verificado se o rei aliado consegue se mover, caso contrario é xeque mate.
+
+A pontuação está ligada á escolha da cor na criacao de jogador e ao numero de jogadas que começa do zero. Se o jogador 1 escolher as peças pretas, suas jogadas serão impar e vice-versa. Após todas as jogadas válidas o contador é incrementado e é com o numero de jogadas que o jogo sabe a validez das suas escolhas. Quando o jogo verifica um xeque mate, ele n incrementa o numero de jogadas e os pontas sáo atribuidos ao jogador contrário (pecas brancas são par e o s pontos são atribuidos para as peças pretas q sao impares e sai da funcáo jogada.
+
+Existe uma função redundante ( check_xeque_tester(); ), mas ela é necessaria pois sua outra versão formava um loop de funções e o jogo deixava de funcionar.
+
+Funções que não foram implementadas, pois conforme a complexidade foi aumentando, as regras tbm iam mudando e eu demorei muito pra determinar e entender como todas as regras se comunicavam entre si:
+
+Contar as peças existentes no tabuleiro para determinar os tipos empates tecnico;
+
+Contar as pecas movidas num array e determinar um codigo para realizar o movimento roque;
+
+Checar se o peão chegou na ultima casa para sofre uma promoção;
+
+
+
+

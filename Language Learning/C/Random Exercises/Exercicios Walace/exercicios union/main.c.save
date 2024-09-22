@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef union documento{
+    char cpf[11];
+    char cnpj[14];
+}docu;
+
+struct endereco{
+    int numero;
+    char rua[256];
+    char bairro[256];
+    char cidade[256];
+
+};
+
+struct alunos{
+    char nome[50];
+    int idade;
+    struct endereco ende;
+    docu docu;
+    int doc;
+};
+int main()
+{
+    int i;
+    struct alunos aluno[3];
+    //union documento doc;
+
+    for(i=0; i<3; i++){
+
+        printf("Digite seu nome:\n");
+        gets(aluno[i].nome);
+        //printf("%s", aluno[i].nome);
+
+        printf("Digite sua idade:\n");
+        scanf("%d", &aluno[i].idade);
+
+        printf("Digite o numero da sua casa:\n");
+        scanf("%d", &aluno[i].ende.numero);
+
+        printf("Digite o nome da sua rua:\n");
+        gets(aluno[i].ende.rua);
+
+        printf("Digite o nome do seu bairro:\n");
+        gets(aluno[i].ende.bairro);
+
+        printf("Voce quer digitar\nCPF-1\nCNPJ-2\n");
+        scanf("%d", &aluno[i].doc);
+
+        if(aluno[i].doc == 1){
+            printf("Digite seu CPF:\n");
+            scanf("%s", aluno[i].docu.cpf);
+        }else if (aluno[i].doc == 2){
+            printf("Digite seu CNPJ:\n");
+            scanf("%s", aluno[i].docu.cnpj);
+        }else{
+            printf("Escolha invalida");
+        }
+
+    }
+
+
+    for(i=0;i<3;i++){
+
+        printf("\nAluno: %d\nEndereco: %s\nDocumento: s", i++);
+        printf("\nNome: %s", aluno[i].nome);
+        printf("\nIdade: %d", aluno[i].idade);
+        if(aluno[i].doc == 1){
+
+            printf("\nCPF: %s", aluno[i].docu.cpf);
+
+        }else{
+            printf("\nCNPJ: %s", aluno[i].docu.cnpj);
+        }
+        printf("\nEndereco: Rua %s, numero %d, %s, %s", aluno[i].ende.rua, aluno[i].ende.numero, aluno[i].ende.bairro, aluno[i].ende.cidade);
+
+    }
+
+    return 0;
+}

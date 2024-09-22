@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1664540030 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicios manipulacao string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

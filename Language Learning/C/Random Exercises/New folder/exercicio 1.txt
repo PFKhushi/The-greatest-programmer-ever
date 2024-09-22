@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int idade;
+
+    printf("Qual a sua idade?\n");
+    scanf("%d", &idade);
+
+    if (idade >= 25 && idade <= 45){
+            printf("Vc está entre 25 e 45 anos");
+
+    }
+    else {
+        printf("Vc esta fora da idade");
+    }
+    return 0;
+}

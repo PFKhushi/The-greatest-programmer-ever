@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    int key;
+    int index;
+    struct Node* next;
+} Node;
+
+Node* createNode(int key, int index) {
+    Node* node = (Node*)malloc(sizeof(Node));
+    node->key = key;
+    node->index = index;
+    node->next = NULL;
+    return node;
+}
+
+int hash(int key, int size) {
+    return abs(key) % size;
+}
+
+void insert(Node** map, int key, int index, int size) {
+    int h = hash(key, size);
+    Node* newNode = createNode(key, index);
+    newNode->next = map[h];
+    map[h] = newNode;
+}
+
+int find(Node** map, int key, int size) {
+    int h = hash(key, size);
+    Node* current = map[h];
+    while (current != NULL) {
+        if (current->key == key) {
+            return current->index;
+        }
+        current = current->next;
+    }
+    return -1;
+}
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    int size = numsSize * 2;
+    Node** map = (Node*)calloc(size, sizeof(Node));
+    int* result = (int*)malloc(2 * sizeof(int));
+    for (int i = 0; i < numsSize; i++) {
+        int complement = target - nums[i];
+        int complementIndex = find(map, complement, size);
+        if (complementIndex != -1) {
+            result[0] = complementIndex;
+            result[1] = i;
+            *returnSize = 2;
+            free(map);
+            return result;
+        }
+        insert(map, nums[i], i, size);
+    }
+    
+    free(map);
+    *returnSize = 0;
+    return result;
+}
+
+
+
+
+
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}

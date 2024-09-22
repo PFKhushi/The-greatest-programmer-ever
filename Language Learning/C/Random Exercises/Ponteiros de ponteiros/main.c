@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num = 1026; // 4 bytes B4-00000000 B3-00000000 B2-00000100 B1-00000010
+    int *ponteiro_int;
+
+    ponteiro_int = &num;
+
+    char *ponteiro_char = (char*)ponteiro_int;//Como char so tem 1 byte, o ponteiro vai guardar o primeiro byte de num 00000010 = 2
+    char *ponteiro2_char = ((char*)ponteiro_int)+1;//Aqui vamos para o segundo byte de num q contém 00000100 = 4
+    char *ponteiro3_char = ((char*)ponteiro_int)+2;//Acessando o terceiro byte para garantir q é zero 00000000 = 0
+    char str[32];
+
+    printf("O valor de num: %d\n",num);
+    printf("O endereco de num: %d\n",&num);
+    printf("Valor em binario: %s\n", itoa(1026,str,2));
+    printf("\n\n");
+
+    printf("O valor do endereco do ponteiro_int: %d\n", *ponteiro_int);
+    printf("O endereco guardado no ponteiro_int: %d\n", ponteiro_int);
+    printf("Valor em binario: %s\n", itoa(*ponteiro_int,str,2));
+    printf("\n\n");
+
+    printf("O valor de ponteiro_char: %d\n",*ponteiro_char);
+    printf("O endereco de ponteiro_char: %d\n", ponteiro_char);
+    printf("Valor em binario: %s\n", itoa(*ponteiro_char,str,2));
+    printf("\n\n");
+
+    printf("O valor de ponteiro2_char: %d\n",*ponteiro2_char);
+    printf("O endereco de ponteiro2_char: %d\n", ponteiro2_char);
+    printf("Valor em binario: %s\n", itoa(*ponteiro2_char,str,2));
+    printf("\n\n");
+
+    printf("O valor de ponteiro3_char: %d\n",*ponteiro3_char);
+    printf("O endereco de ponteiro3_char: %d\n", ponteiro3_char);
+    printf("Valor em binario: %s\n", itoa(*ponteiro3_char,str,2));
+    printf("\n\n");
+
+    return 0;
+}

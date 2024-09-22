@@ -1,0 +1,279 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    /*
+    Exercicio 1
+
+    int a, b ,c;
+
+    printf("Digite 3 valores separados por traco\nx-x-x");
+    scanf("%d-%d-%d", &a, &b, &c);
+
+    if (a+b<c){
+        printf("A soma é do primeiro com o segundo é menor que o terceiro");
+    }
+    */
+
+    /*
+    Exercicio 2
+
+    int a;
+
+    printf("Digite um numero");
+    scanf("%d", &a);
+
+    if (a%2==0){
+
+        printf("O numero é par");
+    }
+    else{
+        printf("O numero e impar");
+    }
+    */
+    /*
+
+    Exercicio 3
+
+    int a, b ,c;
+
+    printf("Digite dois numeors");
+    scanf("%d %d", &a, &b);
+
+    if (a==b){
+
+        printf("os numeors sao iguais e soma é %d", a+b);
+    }
+    else{
+        c = a*b;
+        printf("A multiplicacao e %d", c);
+    }
+    */
+    /*
+    Exercicio 4
+
+    int a;
+
+    printf("Digite um numeor");
+    scanf("%d", &a);
+
+    if (a>0){
+
+        printf("O dobro do numeor positivo e %d", a*2);
+    }
+    else if(a<0){
+        printf("O triplo do numeor negativo e %d", a*3);
+    }
+    else{
+        printf("O numeor e 0");
+    }
+    */
+    /*
+
+    Exercicio 5
+
+    int a;
+
+        printf("Digite um numero");
+    scanf("%d", &a);
+
+    if (a%2==0){
+
+        printf("O numero é par soma do e %d", a +5);
+    }
+    else{
+        printf("O numero e impar somado e %d", a +8);
+    }
+    */
+
+
+
+
+
+
+
+
+
+
+    /*
+    int a, b, c, _a, _b, _c;
+
+    printf("Digite 3 numeros diferentes\n");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a > b){
+        if(a > c){
+            _a=a;
+        }
+    }
+    if (b > a){
+        if(b > c){
+            _b=b;
+        }
+    }
+    if (a > b){
+        if(a > c){
+            _a=a;
+        }
+    }
+    */
+
+
+
+
+
+
+
+
+    /*
+    exercicio 7
+
+    int sexo;
+    float altura, peso;
+
+    printf("Qual seu sexo? \nMasculino 1\nFeminino 2\n");
+    scanf("%d", &sexo);
+    printf("qual sua latura\n");
+    scanf("%f", &altura);
+
+    switch (sexo){
+        case 1:{
+            peso = (72.7*altura)-58;
+            break;
+        }
+        case 2:{
+            peso = (62.1*altura)-44.7;
+            break;
+        }
+    }
+
+    printf("%f", peso);
+    */
+    /*
+
+    float altura, peso, imc;
+
+    printf("qual sua latura\n");
+    scanf("%f", &altura);
+    printf("Qual o seu peso");
+    scanf("%f", &peso);
+
+
+    imc = peso / (altura*altura);
+
+    if (imc < 18.5){
+        printf("Abaixo do peso");
+    } else if(imc >= 18.5 && imc <= 25){
+        printf("Peso Normal");
+    } else if(imc > 25 && imc <= 30){
+        printf("Acima do peso");
+    } else{
+        printf("Obeso");
+    }
+    */
+    /*
+
+
+    int caso, pag, parcela, num_parcelas = 0;
+    float preco, valor;
+    char resp;
+    printf("Qual o valor do produto?\n");
+    scanf("%f", &preco);
+
+    printf("Qual a forma de pagamento?\nDinheiro/Cheque - 1\nCartao - 2\n");
+    scanf("%d", &pag);
+    if (pag==2){
+
+        printf("Deseja parcelar?\ns/n\n");
+        scanf(" %c", &resp);
+
+
+        if (resp == 's'){
+
+            printf("Quantas parcelas?\n");
+            scanf("%d", &num_parcelas);
+
+            if (num_parcelas > 3){
+                caso = 4;
+            }
+            else{
+                caso = 3;
+            }
+        }else{
+            caso = 3;
+        }
+
+    }else{
+        caso = 1;
+    }
+
+    switch (caso){
+
+        case 1: {
+            valor = preco - (preco * 0.1);
+            printf("Voce pagara R$%.2f", valor);
+            break;
+            } // a vista cheque ou dinheiro
+        case 2: {
+            valor = preco - (preco * 0.15);
+            printf("Voce pagara R$%.2f", valor);
+            break;
+            } // a vista cartao
+        case 3: {
+            valor = preco;
+            printf("Voce pagara R$%.2f durante %d meses!", valor/num_parcelas, num_parcelas);
+            break;
+            } // 3x preco normal
+        case 4: {
+            valor = preco + (preco * 0.1);
+
+            printf("Voce pagara R$%.2f durante %d meses!", valor/num_parcelas, num_parcelas);
+            break;
+            } // 4x preco normal mais
+
+    }
+    */
+
+    char aluno[12], condicao[15];
+    float nota1, nota2, nota3, MA, ME;
+
+    printf("Qual o seu numero de identificacao?\n");
+    gets(aluno);
+
+    printf("Digite suas notas por ordem de recebimento\n");
+    scanf("%f %f %f",&nota1, &nota2, &nota3);
+
+    printf("Qual a sua media de exercicios?\n");
+    scanf("%f", &ME);
+
+    MA = (nota1 + nota2 * 2 + nota3 * 3 + ME)/7;
+
+    if (MA >= 90){
+        printf("O aluno de matricula %c teve %f na primeira nota, %f na segunda e %f na terceira. Sua media de exercicios foi de %f e sua media de notas foi %f.\n Seu MA é de %f.\n");
+        printf("Aluno aprovado");
+    }else if (MA >= 75 && MA < 90){
+        printf("O aluno de matricula %c teve %f na primeira nota, %f na segunda e %f na terceira. Sua media de exercicios foi de %f e sua media de notas foi %f.\n Seu MA é de %f.\n");
+        printf("Aluno aprovado");
+
+    }else if (MA >= 60 && MA < 75){
+        printf("O aluno de matricula %c teve %f na primeira nota, %f na segunda e %f na terceira. Sua media de exercicios foi de %f e sua media de notas foi %f.\n Seu MA é de %f.\n");
+        printf("Aluno aprovado");
+
+    }else if (MA >= 40 && MA < 60){
+        printf("O aluno de matricula %c teve %f na primeira nota, %f na segunda e %f na terceira. Sua media de exercicios foi de %f e sua media de notas foi %f.\n Seu MA é de %f.\n");
+        printf("Aluno reprovado");
+
+    }else{
+
+        printf("O aluno de matricula %c teve %f na primeira nota, %f na segunda e %f na terceira. Sua media de exercicios foi de %f e sua media de notas foi %f.\n Seu MA é de %f.\n");
+        printf("Aluno aprovado");
+    }
+
+printf("%s", condicao);
+
+
+
+    return 0;
+}

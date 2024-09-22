@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //receber numero de habitante, fazer um loop de votacao
+    int a, b, c, pessoas;
+    return 0;
+}

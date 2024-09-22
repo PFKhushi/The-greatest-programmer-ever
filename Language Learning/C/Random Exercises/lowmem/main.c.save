@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    int* pi;
+    pi = &a;
+
+    char b;
+    char* pc;
+    pc = (char*)pi;
+
+    char numeros[10];
+
+    for(int i=0;i<sizeof(numeros);i++){
+
+        printf("Digite um numero:\n");
+        scanf("%d", &a);
+        numeros[i]=*pc;
+        printf("Value of pc:%d\n",*((int*)pc));
+        printf("Size of pc: %d\n\n",sizeof(pc));
+        printf("Value of a:%d\n", a);
+        printf("Size of a: %d\n\n",sizeof(a));
+        printf("Value of numeros: %d\n",(int)numeros[i]);
+        printf("Size of numeros: %d\n\n",sizeof(numeros[i]));
+
+
+    }
+
+
+
+    printf("%d",*((int*)pc));
+
+    return 0;
+}

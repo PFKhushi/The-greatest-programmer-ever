@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1667980736 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicios walace\xadrez\main.c
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+
+1669332747 source:c:\users\mafia\desktop\cc\laboratÃ³rio de desenvolvimento de algoritmos\programs in c\exercicios walace\xadrez\main.c
+	<stdio.h>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+

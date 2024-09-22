@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1668559172 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicios walace\test\main.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+

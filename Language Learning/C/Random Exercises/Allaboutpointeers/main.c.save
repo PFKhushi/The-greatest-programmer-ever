@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+
+    int a = 1026; //Inicializando a com 1026
+    int * p ; //Declarando o ponteiro p para inteiros (4 bytes)
+    p = &a; //inicializando p com o endereco de a
+    //*p = 1;//Desreferenciando o valor de p, q contém o endereco de a. Atribuindo o q tiver no endereco de a com 1
+    printf("Valor de a: %d\n", a);
+    printf("Endereco de a ou &a: %d\n", &a);
+    printf("Valor guardado em p: %d\n", p);
+    printf("p desreferenciado ou *p: %d\n", *p);
+
+
+    char * b;//Declarndo o ponteiro b para caracteres (1 byte)
+    b = (char*)p;
+    //o ponteiro para inteiros p, tem o endereco de a
+    //o valor guardado em a é: 00000000 00000000 00000100 00000010 = 1026
+    //com o typecasting de p inteiro para p caracter, p perde os 3 bytes q o inteiro tem a mais q caracteres
+    // b vai receber o primeiro byte de a: 00000010 = 2
+    printf("Endereço guardado em b: %d\nValor de b %d\n", b,*b);
+    printf("Endereco de b+1: %d\nb+1 desreferenciado: %d\nA da desrefencia de b+(b+1) ou (*b)+(*(b+1): %d",b+1,*(b+1), *b+*(b+1));
+    //a={b+3}00000000 {b+2}00000000 {b+1}00000100 {b}00000010(1026) b+1=00000100(4) b=00000010(2)
+
+    printf("\n\n\nPonteiro inteiro p: %d\nBytes: 00000000 00000000 00000100 00000010 Valor: %d",p, *p);
+
+    //*p = 0;
+    int *test = (int *)((char *)p+1);
+    *test = 2;
+    //00000000 00000000 00000000 00000010
+    //00000000 00000000 00000000 00000100
+
+    char buffer[32];
+    itoa(*,buffer,2);
+
+
+    printf("\nPonteiro inteiro p+\"0.25\": %d\nBytes: 00000001 00000000 00000000 00000100 Valor: %d\n", test, *test);
+    printf("\nPonteiro inteiro p: %d, valor de p: %d", p, *p);
+
+    printf("\n\nbuffer: %s\n\n", buffer);
+
+
+
+
+
+    return 0;
+}

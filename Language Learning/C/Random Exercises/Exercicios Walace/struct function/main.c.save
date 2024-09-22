@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct pessoa{
+    char nome[50];
+    int idade;
+    float peso, salario;
+}personel;
+
+personel humanos[10];
+
+int main()
+{
+    tratar();
+    for(int i=0,;i<10;i++){
+        maioridade(humanos[i].idade);-
+    }
+    
+    return 0;
+}
+
+void tratar(){
+
+
+
+    for(int i=0;i<10;i++){
+        printf("Qual seu nome?\n");
+        scanf("%s", humanos[i].nome);
+        printf("Qual a sua idade?\n");
+        scanf("%d", &humanos[i].idade);
+        printf("Qual a sua peso?\n");
+        scanf("%f", &humanos[i].peso);
+        printf("qual o seu salario?\n");
+        scanf("%f", &humanos[i].salario);
+    }
+}
+
+void maioridade(idade){
+    if(idade<18){
+        printf("Menor");
+    }else{
+    printf("Maior"};
+}

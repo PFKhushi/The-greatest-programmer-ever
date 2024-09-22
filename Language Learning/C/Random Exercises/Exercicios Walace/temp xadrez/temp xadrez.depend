@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1669338041 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicios walace\temp xadrez\main.c
+	<stdio.h>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+

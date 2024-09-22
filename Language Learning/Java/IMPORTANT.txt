@@ -1,0 +1,44 @@
+After installing jdk 23 and exporting the path on .rcbash when can now compile and execute java files
+
+
+For compiling files we need the file to have a class with the same name(?)
+        if we have a test.java with main in a class called somthing else like "Main" we get
+                test.java:1: error: class Main is public, should be declared in a file named Main.java
+                public class Main{
+                       ^
+                1 error
+
+        we use 
+                javac fname.java
+        to compile and we use 
+                java fname.java 
+        to run the file
+        
+TO CREATE AND USE A NEW PACKAGE:
+        First we need a main java file to add this line:
+                
+                "javac -d . fname.java "
+
+                javac compila; -d . in the same directory; what is written in fname.java;
+
+                fname.java contains 
+                
+                this compiles the project and creates a directory especified in the with the package syntax
+                
+
+
+                package myClass;  this creates in the same directory of the script a folder myClass with fnama.class 
+
+                public class Main{
+                (...)
+                }
+
+                Program.java
+                Program.class
+                myClass/
+                        Program.class 
+
+
+        Then we run it telling java the full path of the program.class like:
+                
+                java tools.toolkit.Program

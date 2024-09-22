@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1661475052 source:c:\users\mafia\desktop\cc\laboratório de desenvolvimento de algoritmos\programs in c\exercicio 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
