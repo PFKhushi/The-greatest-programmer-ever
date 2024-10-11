@@ -1,0 +1,26 @@
+class Aluno:
+    def __init__(self, nome, prof=None):
+        self.nome = nome
+        self.prof = prof if prof is not None else []
+    def printProf(self):
+        for i in self.prof:
+            print(i.nome)
+
+class Prof:
+    def __init__(self, nome, alunos=None):
+        self.nome = nome
+        self.alunos = alunos if alunos is not None else []
+    def printalunos(self):
+        for i in self.alunos:
+            print(i.nome)
+
+prof = Prof("Ms. Smith")
+aluno = Aluno("John Doe")
+
+prof.alunos.append(aluno)
+aluno.prof.append(prof)
+
+print(aluno.nome)
+aluno.printProf()
+print(prof.nome)
+prof.printalunos()
