@@ -1,10 +1,8 @@
-package Exercicio_3;
+package Exercicio_3_15;
 
 public class ContaBancaria {
 	private double saldo;
 	private String titular;
-	
-	
 	
 	public ContaBancaria() {
 		this.saldo = 0;
@@ -18,10 +16,15 @@ public class ContaBancaria {
 		this.saldo += valor;
 	}
 	public double Sacar(double valor) {
-		if(valor<=this.saldo) {
+		try {
+			if(valor<=this.saldo) {
 			this.saldo -= valor;
 			return valor;
-		}else {
+			}else {
+				throw new SaldoInsuficiente(this.saldo, valor);
+			}
+			
+		} catch (Exception e) {
 			return 0;
 		}
 	}

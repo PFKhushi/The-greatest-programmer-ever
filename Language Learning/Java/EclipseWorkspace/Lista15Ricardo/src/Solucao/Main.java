@@ -1,19 +1,12 @@
 package Solucao;
 
-import Exercicio_4_5.*;
+import Exercicio_10.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Cachorro cao = new Cachorro("Bob", "Au au");
-		Gato gato = new Gato("Xanin", "Miau");
-		Animal[] animais = {gato, cao};
-		ListaAnimais listAnimais = new ListaAnimais(animais);
-		gato.FazSom();
-		cao.FazSom();
-		
-		listAnimais.printAnimais();
+		System.out.println(Calculadora.calcula(0,1,2,3,4,5,6,7));
 
 	}
 
